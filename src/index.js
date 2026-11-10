@@ -1,4 +1,4 @@
-const { conectarDB, cerrarDB } = require('./config/database');
+const { conectarDB, cerrarDB } = require('./database');
 const seedData = require('./DatosPrueba');
 const peliculasService = require('./CrudPeliculas');
 
@@ -6,7 +6,6 @@ async function main() {
 
     try {
         await conectarDB();
-        await peliculasService.reiniciarColeccion(); //Limpiar Datos
         await peliculasService.insertarPeliculas(seedData); //Ingresar datos de prueba en la bd
 
 
@@ -55,3 +54,4 @@ async function main() {
   }
 
 }
+main();

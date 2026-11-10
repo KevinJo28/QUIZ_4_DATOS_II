@@ -14,7 +14,7 @@ async function insertarPeliculas(peliculas) {
 
 async function buscarPorGenero(genero) {
   const coleccion = await getCollection();
-  return await coleccion.find({ genero: genero }).toArray();
+  return await coleccion.find({ generos: genero }).toArray();
 }
 
 async function agregarResena(tituloPelicula, resena) {
