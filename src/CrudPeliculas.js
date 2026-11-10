@@ -1,0 +1,1 @@
+const { obtenerColeccion } = require('./database');
